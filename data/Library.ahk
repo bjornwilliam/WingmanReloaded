@@ -1680,131 +1680,131 @@
                 ;calculate the height of each tab
                 global vY_StashTabSize := Round(GameH / ( 1080 / 22))
             }
-            Else If (ResolutionScale="Classic") {
+            Else If (ResolutionScale="Custom") {
                 ; Item Inventory Grid
-                Global InventoryGridX := [ Round(GameW/(1440/794)) , Round(GameW/(1440/846)) , Round(GameW/(1440/899)) , Round(GameW/(1440/952)) , Round(GameW/(1440/1004)) , Round(GameW/(1440/1057)) , Round(GameW/(1440/1110)) , Round(GameW/(1440/1162)) , Round(GameW/(1440/1215)) , Round(GameW/(1440/1268)) , Round(GameW/(1440/1320)) , Round(GameW/(1440/1373)) ]
-                Global InventoryGridY := [ Round(GameH/(1080/638)), Round(GameH/(1080/690)), Round(GameH/(1080/743)), Round(GameH/(1080/796)), Round(GameH/(1080/848)) ]  
+                Global InventoryGridX := [ Round(GameW/(2560/794)) , Round(GameW/(2560/846)) , Round(GameW/(2560/899)) , Round(GameW/(2560/952)) , Round(GameW/(2560/1004)) , Round(GameW/(2560/1057)) , Round(GameW/(2560/1110)) , Round(GameW/(2560/1162)) , Round(GameW/(2560/1215)) , Round(GameW/(2560/1268)) , Round(GameW/(2560/1320)) , Round(GameW/(2560/1373)) ]
+                Global InventoryGridY := [ Round(GameH/(1600/638)), Round(GameH/(1600/690)), Round(GameH/(1600/743)), Round(GameH/(1600/796)), Round(GameH/(1600/848)) ]  
                 ; Fill Metamorph
                 If !FillMetamorphImported
-                    Global FillMetamorph := {"X1": GameX + Round(GameW/(1440/89)) ; (1440/2)-631
-                                    , "Y1": GameY + Round(GameH/(1080/189))
-                                    , "X2": GameX + Round(GameW/(1440/505)) ; (1440/2)-215
-                                    , "Y2": GameY + Round(GameH/(1080/746))}
+                    Global FillMetamorph := {"X1": GameX + Round(GameW/(2560/89)) ; (2560/2)-631
+                                    , "Y1": GameY + Round(GameH/(1600/189))
+                                    , "X2": GameX + Round(GameW/(2560/505)) ; (2560/2)-215
+                                    , "Y2": GameY + Round(GameH/(1600/746))}
                 ; Globe areas
                 If (!GlobeImported)
                 {
                     ; Life scan area
-                    Globe.Life.X1 := GameX + Round(GameW/(1440/106)) ; left side does not require repositioning
-                    Globe.Life.Y1 := GameY + Round(GameH/(1080/886))
-                    Globe.Life.X2 := GameX + Round(GameW/(1440/146)) 
-                    Globe.Life.Y2 := GameY + Round(GameH/(1080/1049))
+                    Globe.Life.X1 := GameX + Round(GameW/(2560/106)) ; left side does not require repositioning
+                    Globe.Life.Y1 := GameY + Round(GameH/(1600/886))
+                    Globe.Life.X2 := GameX + Round(GameW/(2560/146)) 
+                    Globe.Life.Y2 := GameY + Round(GameH/(1600/1049))
                     Globe.Life.Width := Globe.Life.X2 - Globe.Life.X1
                     Globe.Life.Height := Globe.Life.Y2 - Globe.Life.Y1
                     ; ES scan area
-                    Globe.ES.X1 := GameX + Round(GameW/(1440/165)) 
-                    Globe.ES.Y1 := GameY + Round(GameH/(1080/886))
-                    Globe.ES.X2 := GameX + Round(GameW/(1440/210)) 
-                    Globe.ES.Y2 := GameY + Round(GameH/(1080/1064))
+                    Globe.ES.X1 := GameX + Round(GameW/(2560/165)) 
+                    Globe.ES.Y1 := GameY + Round(GameH/(1600/886))
+                    Globe.ES.X2 := GameX + Round(GameW/(2560/210)) 
+                    Globe.ES.Y2 := GameY + Round(GameH/(1600/1064))
                     Globe.ES.Width := Globe.ES.X2 - Globe.ES.X1
                     Globe.ES.Height := Globe.ES.Y2 - Globe.ES.Y1
                     ; ES for Eldridtch Batterry scan area
-                    Globe.EB.X1 := GameX + Round(GameW/(1440/1240)) ; Width - 200
-                    Globe.EB.Y1 := GameY + Round(GameH/(1080/886))
-                    Globe.EB.X2 := GameX + Round(GameW/(1440/1320)) ; Width - 120
-                    Globe.EB.Y2 := GameY + Round(GameH/(1080/1064))
+                    Globe.EB.X1 := GameX + Round(GameW/(2560/1240)) ; Width - 200
+                    Globe.EB.Y1 := GameY + Round(GameH/(1600/886))
+                    Globe.EB.X2 := GameX + Round(GameW/(2560/1320)) ; Width - 120
+                    Globe.EB.Y2 := GameY + Round(GameH/(1600/1064))
                     Globe.EB.Width := Globe.EB.X2 - Globe.EB.X1
                     Globe.EB.Height := Globe.EB.Y2 - Globe.EB.Y1
                     ; Mana scan area
-                    Globe.Mana.X1 := GameX + Round(GameW/(1440/1280)) ; Width - 160
-                    Globe.Mana.Y1 := GameY + Round(GameH/(1080/878))
-                    Globe.Mana.X2 := GameX + Round(GameW/(1440/1350)) ; Width - 90
-                    Globe.Mana.Y2 := GameY + Round(GameH/(1080/1060))
+                    Globe.Mana.X1 := GameX + Round(GameW/(2560/1280)) ; Width - 160
+                    Globe.Mana.Y1 := GameY + Round(GameH/(1600/878))
+                    Globe.Mana.X2 := GameX + Round(GameW/(2560/1350)) ; Width - 90
+                    Globe.Mana.Y2 := GameY + Round(GameH/(1600/1060))
                     Globe.Mana.Width := Globe.Mana.X2 - Globe.Mana.X1
                     Globe.Mana.Height := Globe.Mana.Y2 - Globe.Mana.Y1
                     ; Set the base values for restoring default
                     Base.Globe := Array_DeepClone(Globe)
                 }
                 ;Detonate Mines
-                Global DetonateDelveX:=GameX + Round(GameW/(1440/1062))
-                Global DetonateX:=GameX + Round(GameW/(1440/1178))
-                Global DetonateY:=GameY + Round(GameH/(1080/901))
+                Global DetonateDelveX:=GameX + Round(GameW/(2560/1062))
+                Global DetonateX:=GameX + Round(GameW/(2560/1178))
+                Global DetonateY:=GameY + Round(GameH/(1600/901))
                 ;Scrolls in currency tab
-                Global WisdomStockX:=GameX + Round(GameW/(1440/125))
-                Global PortalStockX:=GameX + Round(GameW/(1440/175))
-                Global WPStockY:=GameY + Round(GameH/(1080/262))
+                Global WisdomStockX:=GameX + Round(GameW/(2560/125))
+                Global PortalStockX:=GameX + Round(GameW/(2560/175))
+                Global WPStockY:=GameY + Round(GameH/(1600/262))
                 ;Status Check OnMenu
                 global vX_OnMenu:=GameX + Round(GameW / 2)
-                global vY_OnMenu:=GameY + Round(GameH / (1080 / 54))
+                global vY_OnMenu:=GameY + Round(GameH / (1600 / 54))
                 ;Status Check OnChar
-                global vX_OnChar:=GameX + Round(GameW / (1440 / 41))
-                global vY_OnChar:=GameY + Round(GameH / ( 1080 / 915))
+                global vX_OnChar:=GameX + Round(GameW / (2560 / 41))
+                global vY_OnChar:=GameY + Round(GameH / ( 1600 / 915))
                 ;Status Check OnChat
-                global vX_OnChat:=GameX + Round(GameW / (1440 / 0))
-                global vY_OnChat:=GameY + Round(GameH / ( 1080 / 653))
+                global vX_OnChat:=GameX + Round(GameW / (2560 / 0))
+                global vY_OnChat:=GameY + Round(GameH / ( 1600 / 653))
                 ;Status Check OnInventory
-                global vX_OnInventory:=GameX + Round(GameW / (1440 / 1103))
-                global vY_OnInventory:=GameY + Round(GameH / ( 1080 / 36))
+                global vX_OnInventory:=GameX + Round(GameW / (2560 / 1103))
+                global vY_OnInventory:=GameY + Round(GameH / ( 1600 / 36))
                 ;Status Check OnStash
-                global vX_OnStash:=GameX + Round(GameW / (1440 / 336))
-                global vY_OnStash:=GameY + Round(GameH / ( 1080 / 32))
+                global vX_OnStash:=GameX + Round(GameW / (2560 / 336))
+                global vY_OnStash:=GameY + Round(GameH / ( 1600 / 32))
                 ;Status Check OnVendor
-                global vX_OnVendor:=GameX + Round(GameW / (1440 / 378))
-                global vY_OnVendor:=GameY + Round(GameH / ( 1080 / 88))
+                global vX_OnVendor:=GameX + Round(GameW / (2560 / 378))
+                global vY_OnVendor:=GameY + Round(GameH / ( 1600 / 88))
                 ;Status Check OnDiv
-                global vX_OnDiv:=GameX + Round(GameW / (1440 / 378))
-                global vY_OnDiv:=GameY + Round(GameH / ( 1080 / 135))
+                global vX_OnDiv:=GameX + Round(GameW / (2560 / 378))
+                global vY_OnDiv:=GameY + Round(GameH / ( 1600 / 135))
                 ;Status Check OnLeft
-                global vX_OnLeft:=GameX + Round(GameW / (1440 / 252))
-                global vY_OnLeft:=GameY + Round(GameH / ( 1080 / 57))
+                global vX_OnLeft:=GameX + Round(GameW / (2560 / 252))
+                global vY_OnLeft:=GameY + Round(GameH / ( 1600 / 57))
                 ;Status Check OnDelveChart
-                global vX_OnDelveChart:=GameX + Round(GameW / (1440 / 226))
-                global vY_OnDelveChart:=GameY + Round(GameH / ( 1080 / 89))
+                global vX_OnDelveChart:=GameX + Round(GameW / (2560 / 226))
+                global vY_OnDelveChart:=GameY + Round(GameH / ( 1600 / 89))
                 ;Status Check OnMetamorph
-                global vX_OnMetamorph:=GameX + Round(GameW / (1440 / 545))
-                global vY_OnMetamorph:=GameY + Round(GameH / ( 1080 / 204))
+                global vX_OnMetamorph:=GameX + Round(GameW / (2560 / 545))
+                global vY_OnMetamorph:=GameY + Round(GameH / ( 1600 / 204))
                 ;Life %'s
-                global vX_Life:=GameX + Round(GameW / (1440 / 95))
-                global vY_Life20:=GameY + Round(GameH / ( 1080 / 1034))
-                global vY_Life30:=GameY + Round(GameH / ( 1080 / 1014))
-                global vY_Life40:=GameY + Round(GameH / ( 1080 / 994))
-                global vY_Life50:=GameY + Round(GameH / ( 1080 / 974))
-                global vY_Life60:=GameY + Round(GameH / ( 1080 / 954))
-                global vY_Life70:=GameY + Round(GameH / ( 1080 / 934))
-                global vY_Life80:=GameY + Round(GameH / ( 1080 / 914))
-                global vY_Life90:=GameY + Round(GameH / ( 1080 / 894))
+                global vX_Life:=GameX + Round(GameW / (2560 / 95))
+                global vY_Life20:=GameY + Round(GameH / ( 1600 / 1034))
+                global vY_Life30:=GameY + Round(GameH / ( 1600 / 1014))
+                global vY_Life40:=GameY + Round(GameH / ( 1600 / 994))
+                global vY_Life50:=GameY + Round(GameH / ( 1600 / 974))
+                global vY_Life60:=GameY + Round(GameH / ( 1600 / 954))
+                global vY_Life70:=GameY + Round(GameH / ( 1600 / 934))
+                global vY_Life80:=GameY + Round(GameH / ( 1600 / 914))
+                global vY_Life90:=GameY + Round(GameH / ( 1600 / 894))
                 ;ES %'s
                 If YesEldritchBattery
-                    global vX_ES:=GameX + Round(GameW / (1440 / 1260))
+                    global vX_ES:=GameX + Round(GameW / (2560 / 1260))
                 Else
-                    global vX_ES:=GameX + Round(GameW / (1440 / 180))
-                global vY_ES20:=GameY + Round(GameH / ( 1080 / 1034))
-                global vY_ES30:=GameY + Round(GameH / ( 1080 / 1014))
-                global vY_ES40:=GameY + Round(GameH / ( 1080 / 994))
-                global vY_ES50:=GameY + Round(GameH / ( 1080 / 974))
-                global vY_ES60:=GameY + Round(GameH / ( 1080 / 954))
-                global vY_ES70:=GameY + Round(GameH / ( 1080 / 934))
-                global vY_ES80:=GameY + Round(GameH / ( 1080 / 914))
-                global vY_ES90:=GameY + Round(GameH / ( 1080 / 894))
+                    global vX_ES:=GameX + Round(GameW / (2560 / 180))
+                global vY_ES20:=GameY + Round(GameH / ( 1600 / 1034))
+                global vY_ES30:=GameY + Round(GameH / ( 1600 / 1014))
+                global vY_ES40:=GameY + Round(GameH / ( 1600 / 994))
+                global vY_ES50:=GameY + Round(GameH / ( 1600 / 974))
+                global vY_ES60:=GameY + Round(GameH / ( 1600 / 954))
+                global vY_ES70:=GameY + Round(GameH / ( 1600 / 934))
+                global vY_ES80:=GameY + Round(GameH / ( 1600 / 914))
+                global vY_ES90:=GameY + Round(GameH / ( 1600 / 894))
                 ;Mana
-                global vX_Mana:=GameX + Round(GameW / (1440 / 1345))
-                global vY_Mana10:=GameY + Round(GameH / (1080 / 1054))
-                global vY_Mana90:=GameY + Round(GameH / (1080 / 876))
+                global vX_Mana:=GameX + Round(GameW / (2560 / 1345))
+                global vY_Mana10:=GameY + Round(GameH / (1600 / 1054))
+                global vY_Mana90:=GameY + Round(GameH / (1600 / 876))
                 Global vH_ManaBar:= vY_Mana10 - vY_Mana90
                 Global vY_ManaThreshold:=vY_Mana10 - Round(vH_ManaBar* (ManaThreshold / 100))
                 ;GUI overlay
-                global GuiX:=GameX + Round(GameW / (1440 / -10))
-                global GuiY:=GameY + Round(GameH / (1080 / 1027))
+                global GuiX:=GameX + Round(GameW / (2560 / -10))
+                global GuiY:=GameY + Round(GameH / (1600 / 1027))
                 ;Divination Y locations
-                Global vY_DivTrade:=GameY + Round(GameH / (1080 / 736))
-                Global vY_DivItem:=GameY + Round(GameH / (1080 / 605))
+                Global vY_DivTrade:=GameY + Round(GameH / (1600 / 736))
+                Global vY_DivItem:=GameY + Round(GameH / (1600 / 605))
                 ;Stash tabs menu button
-                global vX_StashTabMenu := GameX + Round(GameW / (1440 / 640))
-                global vY_StashTabMenu := GameY + Round(GameH / ( 1080 / 146))
+                global vX_StashTabMenu := GameX + Round(GameW / (2560 / 640))
+                global vY_StashTabMenu := GameY + Round(GameH / ( 1600 / 146))
                 ;Stash tabs menu list
-                global vX_StashTabList := GameX + Round(GameW / (1440 / 706))
-                global vY_StashTabList := GameY + Round(GameH / ( 1080 / 120))
+                global vX_StashTabList := GameX + Round(GameW / (2560 / 706))
+                global vY_StashTabList := GameY + Round(GameH / ( 1600 / 120))
                 ;calculate the height of each tab
-                global vY_StashTabSize := Round(GameH / ( 1080 / 22))
+                global vY_StashTabSize := Round(GameH / ( 1600 / 22))
             }
             Else If (ResolutionScale="Cinematic") {
                 ; Item Inventory Grid
