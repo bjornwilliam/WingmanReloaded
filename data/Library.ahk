@@ -1682,8 +1682,9 @@
             }
             Else If (ResolutionScale="Custom") {
                 ; Item Inventory Grid
-                Global InventoryGridX := [ Round(GameW/(2560/794)) , Round(GameW/(2560/846)) , Round(GameW/(2560/899)) , Round(GameW/(2560/952)) , Round(GameW/(2560/1004)) , Round(GameW/(2560/1057)) , Round(GameW/(2560/1110)) , Round(GameW/(2560/1162)) , Round(GameW/(2560/1215)) , Round(GameW/(2560/1268)) , Round(GameW/(2560/1320)) , Round(GameW/(2560/1373)) ]
-                Global InventoryGridY := [ Round(GameH/(1600/638)), Round(GameH/(1600/690)), Round(GameH/(1600/743)), Round(GameH/(1600/796)), Round(GameH/(1600/848)) ]  
+				; y start 944 , ynext1023 height =  79
+                Global InventoryGridX := [ Round(GameW/(2560/1603)) , Round(GameW/(2560/1681)) , Round(GameW/(2560/1759)) , Round(GameW/(2560/1837)) , Round(GameW/(2560/1915)) , Round(GameW/(2560/1993)) , Round(GameW/(2560/2071)) , Round(GameW/(2560/2149)) , Round(GameW/(2560/2227)) , Round(GameW/(2560/2305)) , Round(GameW/(2560/2383)) , Round(GameW/(2560/2461)) ]
+                Global InventoryGridY := [ Round(GameH/(1600/944)), Round(GameH/(1600/1023)), Round(GameH/(1600/1100)), Round(GameH/(1600/1178)), Round(GameH/(1600/1256)) ]  
                 ; Fill Metamorph
                 If !FillMetamorphImported
                     Global FillMetamorph := {"X1": GameX + Round(GameW/(2560/89)) ; (2560/2)-631
