@@ -1599,7 +1599,7 @@
 		Gui Add, DropDownList, gUpdateExtra	vScriptUpdateTimeType   xs    w90            						, %ScriptUpdateTimeType%||Off|days|hours|minutes
 		Gui Add, Edit, gUpdateExtra	vScriptUpdateTimeInterval    x+5   w40           	    					, %ScriptUpdateTimeInterval%
 		Gui, Add, Text, 			x+8 yp+3							 										, Auto-check Update
-		Gui Add, DropDownList, gUpdateResolutionScale	vResolutionScale       w90   xs            	    		, Standard|Classic|Cinematic|Cinematic(43:18)|UltraWide
+		Gui Add, DropDownList, gUpdateResolutionScale	vResolutionScale       w90   xs            	    		, Standard|Custom|Cinematic|Cinematic(43:18)|UltraWide
 		GuiControl, ChooseString, ResolutionScale, %ResolutionScale%
 		Gui, Add, Text, 			x+8 y+-18							 										, Aspect Ratio
 		Gui, Add, DropDownList, gUpdateExtra vLatency w40 xs y+10,  %Latency%||1|1.1|1.2|1.3|1.4|1.5|1.6|1.7|1.8|1.9|2|2.5|3

@@ -1737,17 +1737,17 @@
                 global vX_OnMenu:=GameX + Round(GameW / 2)
                 global vY_OnMenu:=GameY + Round(GameH / (1600 / 54))
                 ;Status Check OnChar
-                global vX_OnChar:=GameX + Round(GameW / (2560 / 41))
-                global vY_OnChar:=GameY + Round(GameH / ( 1600 / 915))
+                global vX_OnChar:=GameX + Round(GameW / (2560 / 60))
+                global vY_OnChar:=GameY + Round(GameH / ( 1600 / 1355))
                 ;Status Check OnChat
                 global vX_OnChat:=GameX + Round(GameW / (2560 / 0))
-                global vY_OnChat:=GameY + Round(GameH / ( 1600 / 653))
+                global vY_OnChat:=GameY + Round(GameH / ( 1600 / 1002))
                 ;Status Check OnInventory
-                global vX_OnInventory:=GameX + Round(GameW / (2560 / 1103))
-                global vY_OnInventory:=GameY + Round(GameH / ( 1600 / 36))
+                global vX_OnInventory:=GameX + Round(GameW / (2560 / 2063))
+                global vY_OnInventory:=GameY + Round(GameH / ( 1600 / 55))
                 ;Status Check OnStash
-                global vX_OnStash:=GameX + Round(GameW / (2560 / 336))
-                global vY_OnStash:=GameY + Round(GameH / ( 1600 / 32))
+                global vX_OnStash:=GameX + Round(GameW / (2560 / 499))
+                global vY_OnStash:=GameY + Round(GameH / ( 1600 / 47))
                 ;Status Check OnVendor
                 global vX_OnVendor:=GameX + Round(GameW / (2560 / 378))
                 global vY_OnVendor:=GameY + Round(GameH / ( 1600 / 88))
@@ -1755,8 +1755,8 @@
                 global vX_OnDiv:=GameX + Round(GameW / (2560 / 378))
                 global vY_OnDiv:=GameY + Round(GameH / ( 1600 / 135))
                 ;Status Check OnLeft
-                global vX_OnLeft:=GameX + Round(GameW / (2560 / 252))
-                global vY_OnLeft:=GameY + Round(GameH / ( 1600 / 57))
+                global vX_OnLeft:=GameX + Round(GameW / (2560 / 499))
+                global vY_OnLeft:=GameY + Round(GameH / ( 1600 / 47))
                 ;Status Check OnDelveChart
                 global vX_OnDelveChart:=GameX + Round(GameW / (2560 / 226))
                 global vY_OnDelveChart:=GameY + Round(GameH / ( 1600 / 89))
@@ -1799,13 +1799,13 @@
                 Global vY_DivTrade:=GameY + Round(GameH / (1600 / 736))
                 Global vY_DivItem:=GameY + Round(GameH / (1600 / 605))
                 ;Stash tabs menu button
-                global vX_StashTabMenu := GameX + Round(GameW / (2560 / 640))
-                global vY_StashTabMenu := GameY + Round(GameH / ( 1600 / 146))
+                global vX_StashTabMenu := GameX + Round(GameW / (2560 / 949))
+                global vY_StashTabMenu := GameY + Round(GameH / ( 1600 / 220))
                 ;Stash tabs menu list
-                global vX_StashTabList := GameX + Round(GameW / (2560 / 706))
-                global vY_StashTabList := GameY + Round(GameH / ( 1600 / 120))
+                global vX_StashTabList := GameX + Round(GameW / (2560 / 1133))
+                global vY_StashTabList := GameY + Round(GameH / ( 1600 / 181))
                 ;calculate the height of each tab
-                global vY_StashTabSize := Round(GameH / ( 1600 / 22))
+                global vY_StashTabSize := Round(GameH / ( 1600 / 29))
             }
             Else If (ResolutionScale="Cinematic") {
                 ; Item Inventory Grid
