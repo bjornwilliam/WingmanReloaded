@@ -1805,7 +1805,7 @@
                 global vX_StashTabList := GameX + Round(GameW / (2560 / 1133))
                 global vY_StashTabList := GameY + Round(GameH / ( 1600 / 181))
                 ;calculate the height of each tab
-                global vY_StashTabSize := Round(GameH / ( 1600 / 29))
+                global vY_StashTabSize := Round(GameH / ( 1600 / 33))
             }
             Else If (ResolutionScale="Cinematic") {
                 ; Item Inventory Grid
